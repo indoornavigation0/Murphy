@@ -1,0 +1,29 @@
+﻿<Window x:Class="Murphy.Administation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Murphy"
+        mc:Ignorable="d"
+        Title="Administation" Height="450" Width="800">
+    <Grid  Background="#FFECE8E8">
+        <Canvas HorizontalAlignment="Left" Height="88" Margin="47,58,0,0" VerticalAlignment="Top" Width="659">
+            <Label Content="AGENTS" Canvas.Left="10" Canvas.Top="29" RenderTransformOrigin="0.195,-0.219" Width="103"/>
+            <Button Content="Add Agent" Canvas.Left="204" Canvas.Top="30" Width="161" Height="25" Click="addAgent_Click"/>
+            <Button Content="View Agents" Canvas.Left="410" Canvas.Top="30" Width="161" Height="25" Click="viewAgents_Click"/>
+        </Canvas>
+        <Canvas HorizontalAlignment="Left" Height="88" Margin="47,183,0,0" VerticalAlignment="Top" Width="659">
+            <Label Content="ACTIONS" Canvas.Left="10" Canvas.Top="29" RenderTransformOrigin="0.195,-0.219" Width="103"/>
+            <Button Content="Add Action" Canvas.Left="204" Canvas.Top="30" Width="161" Height="25"  Click="addAction_Click"/>
+            <Button Content="View Actions" Canvas.Left="410" Canvas.Top="30" Width="161" Height="25" Click="viewActions_Click"/>
+        </Canvas>
+        <Canvas HorizontalAlignment="Left" Height="88" Margin="47,300,0,0" VerticalAlignment="Top" Width="659">
+            <Label Content="RISKS" Canvas.Left="10" Canvas.Top="29" RenderTransformOrigin="0.195,-0.219" Width="103"/>
+            <Button Content="Add Risk" Canvas.Left="204" Canvas.Top="30" Width="161" Height="25" Click="addRisk_Click"/>
+            <Button Content="View Risks" Canvas.Left="410" Canvas.Top="30" Width="161" Height="25" Click="viewRisks_Click"/>
+        </Canvas>
+        <Button Content="Back to Home" HorizontalAlignment="Left" Margin="667,10,0,0" VerticalAlignment="Top" Width="115" Height="43" Click="Back_Click"/>
+
+
+    </Grid>
+</Window>

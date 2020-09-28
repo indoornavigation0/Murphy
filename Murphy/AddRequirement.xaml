@@ -1,0 +1,69 @@
+﻿<Window x:Class="Murphy.AddRequirement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Murphy"
+        mc:Ignorable="d"
+          Title="Murphy Assistant - Requirement Analysis" Height="800" Width="800" Background="LightGray">
+    <Grid  Background="#FFECE8E8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="286*"/>
+            <RowDefinition Height="483*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Back to Home" HorizontalAlignment="Left" Margin="667,10,0,0" VerticalAlignment="Top" Width="115" Height="43" Click="Back_Click"/>
+
+        <Button  Content="PROCESS" HorizontalAlignment="Left" Margin="624,140,0,0" VerticalAlignment="Top" Width="115" Height="43" Click="btnProcess_Click"/>
+        <TextBox Name="txtRequirement" HorizontalAlignment="Left" ToolTip="Add Requirement" MaxLines="5" Height="43" Margin="115,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="624"/>
+        <Label Content="Add the Requirement Here" HorizontalAlignment="Left" Margin="22,49,0,0" VerticalAlignment="Top" Width="366"/>
+
+        <DataGrid Name="tblSpecifications"  HorizontalAlignment="Left" Margin="0,251,0,388" AutoGenerateColumns="False"   CanUserDeleteRows="False" CanUserAddRows="False" CanUserSortColumns="True" IsReadOnly="True" Grid.RowSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Specification" Width="150" Binding="{Binding SpecificationAction}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            <Setter Property="TextBlock.TextAlignment" Value="Justify"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Analysis" Width="*" Binding="{Binding Mechanism}" >
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            <Setter Property="TextBlock.TextAlignment" Value="Justify"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid Name="grdRisk" Margin="10,102.077,10,10" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="343*"/>
+                <ColumnDefinition Width="429*"/>
+            </Grid.ColumnDefinitions>
+            <Label FontSize="14" FontWeight="Bold" Margin="30,10,133,316">Risk Analysis</Label>
+            <Label Margin="30,96,168.231,242">Choose Question Type:</Label>
+            <ComboBox Margin="174,96,323,243" Grid.ColumnSpan="2" >
+                <ComboBoxItem>A</ComboBoxItem>
+                <ComboBoxItem>B</ComboBoxItem>
+                <ComboBoxItem>C</ComboBoxItem>
+                <ComboBoxItem>D</ComboBoxItem>
+            </ComboBox>
+            <Button  Content="Continue" HorizontalAlignment="Left" Margin="151.769,96,0,0" VerticalAlignment="Top" Width="111" Height="37" Grid.Column="1"/>
+            <Label Margin="30,158,239.231,180" Content="Question 1"/>
+            <Label Margin="174,155,345,183" Content="Question 1 Test " Grid.ColumnSpan="2"/>
+            <TextBox x:Name="txtRequirement_Copy" HorizontalAlignment="Left" ToolTip="Add Requirement" MaxLines="5" Height="43" Margin="174,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="554" Grid.ColumnSpan="2"/>
+            <Button  Content="Proceed to Question 2" HorizontalAlignment="Left" Margin="231.769,309,0,0" VerticalAlignment="Top" Width="153" Height="37" Grid.Column="1"/>
+            <Label Margin="30,203,239.231,135" Content="Answer"/>
+            <Label Margin="30,260,239.231,78" Content="Response" RenderTransformOrigin="0.678,2.332"/>
+            <Label Margin="174,260,345,78" Content="Question 1 Test " Grid.ColumnSpan="2"/>
+        </Grid>
+
+        <RadioButton Content="Specification" HorizontalAlignment="Left" Height="25" Margin="235,202,0,0" VerticalAlignment="Top" IsChecked="True" RenderTransformOrigin="1.104,0.513"/>
+        <RadioButton Content="Domain" HorizontalAlignment="Left" Height="25" Margin="396,202,0,0" VerticalAlignment="Top"/>
+        <Label Width="220" Margin="40,196,532,52.923" Content="Choose One of the following"/>
+    </Grid>
+
+</Window>

@@ -1,0 +1,21 @@
+﻿<Window x:Class="Murphy.AddRisk"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Murphy"
+        mc:Ignorable="d"
+        Title="AddRisk" Height="450" Width="800">
+    <Grid  Background="#FFECE8E8">
+        <Button Content="Back to Administration" HorizontalAlignment="Left" Margin="632,20,0,0" VerticalAlignment="Top" Width="150" Height="43" Click="Back_Click"/>
+        <Grid Margin="104,88,131,30">
+            <Label Content="Risk Associated" HorizontalAlignment="Left" Margin="83,134,0,0" VerticalAlignment="Top" Width="134"/>
+            <TextBox Name="txtRisk" HorizontalAlignment="Left" Height="23" Margin="250,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="241"/>
+            <Label Content="Agent" HorizontalAlignment="Left" Margin="83,189,0,0" VerticalAlignment="Top" Width="134"/>
+            <ComboBox Name="ddlAction" Margin="250,191,66,76" SelectedValuePath="Id"
+    DisplayMemberPath="Name"  />
+            <Button Content="ADD" HorizontalAlignment="Left" Margin="383,250,0,0" VerticalAlignment="Top" Width="149" Height="43" Click="Add_Click"/>
+
+        </Grid>
+    </Grid>
+</Window>

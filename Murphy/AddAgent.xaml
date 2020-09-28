@@ -1,0 +1,18 @@
+﻿<Window x:Class="Murphy.AddAgent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Murphy"
+        mc:Ignorable="d"
+        Title="AddAgent" Height="450" Width="800">
+    <Grid  Background="#FFECE8E8">
+        <Button Content="Back to Administration" HorizontalAlignment="Left" Margin="632,20,0,0" VerticalAlignment="Top" Width="150" Height="43" Click="Back_Click"/>
+        <Grid Margin="104,88,131,30">
+            <Label Content="Agent Name" HorizontalAlignment="Left" Margin="83,134,0,0" VerticalAlignment="Top" Width="134"/>
+            <TextBox Name="txtAgent" HorizontalAlignment="Left" Height="23" Margin="250,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="241"/>
+            <Button Content="ADD" HorizontalAlignment="Left" Margin="378,185,0,0" VerticalAlignment="Top" Width="149" Height="43" Click="Add_Click"/>
+
+        </Grid>
+    </Grid>
+</Window>

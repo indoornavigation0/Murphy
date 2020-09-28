@@ -1,0 +1,14 @@
+﻿<Window x:Class="Murphy.ViewRisks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Murphy"
+        mc:Ignorable="d"
+        Title="ViewRisks" Height="450" Width="800">
+    <Grid  Background="#FFECE8E8">
+        <Button Content="Back to Administration" HorizontalAlignment="Left" Margin="632,20,0,0" VerticalAlignment="Top" Width="150" Height="43" Click="Back_Click"/>
+        <DataGrid Name="tblRisks" Margin="23,73,46,58"  ColumnWidth="*"   CanUserDeleteRows="False" CanUserAddRows="False" CanUserSortColumns="True" IsReadOnly="True">
+        </DataGrid>
+    </Grid>
+</Window>
